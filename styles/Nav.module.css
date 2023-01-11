@@ -1,0 +1,25 @@
+.underline {
+    position: relative;
+}
+.underline:hover {
+    color: var(--highlight);
+}
+.underline::after{
+    display: block;
+    content: '';
+    width: 130%;
+    height: 2px;
+    background: #E8EAED;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transition: transform 0.2s;
+    transform: translate(-50%) scaleX(0);
+    transform-origin: center;
+}
+
+.underline:hover::after {
+    left: 50%;
+    transform: translate(-50%) scaleX(1);
+    background: var(--highlight);
+}
