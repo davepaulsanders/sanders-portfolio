@@ -3,9 +3,8 @@ import Footer from "./Footer"
 import styles from "../styles/Nav.module.css"
 const Nav = () => {
   return (
-    <>
-       <div className="flex flex-col justify-between items-center">
-          <ul className="text-xl mb-10">
+       <div className={`${styles.background} font-extralight flex flex-col justify-center items-center min-w-[250px]`}>
+          <ul className="text-lg text-center mb-10">
             <li className="m-10 relative"><Link className={styles.underline} href="/">Home</Link></li>
             <li className="m-10 relative"><Link className={styles.underline} href="/projects">Projects</Link></li>
             <li className="m-10 relative"><Link className={styles.underline} href="/skills">Skills</Link></li>
@@ -14,7 +13,6 @@ const Nav = () => {
           </ul>
         <Footer />
         </div>
-    </>
     
   )
 }

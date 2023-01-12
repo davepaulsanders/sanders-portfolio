@@ -1,3 +1,7 @@
+.background {
+    background-color: #28293D;
+   }
+
 .underline {
     position: relative;
 }
@@ -22,4 +26,11 @@
     left: 50%;
     transform: translate(-50%) scaleX(1);
     background: var(--highlight);
+}
+
+@media only screen and (max-width: 1000px) {
+    .background {
+        display: none;
+        
+    }
 }
