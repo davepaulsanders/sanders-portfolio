@@ -43,7 +43,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
   return (
     <div className="flex">
       <Nav />
-      <div className="grid grid-cols-12 min-h-screen max-h-screen">
+      <div className="main grid grid-cols-12 w-full min-h-screen max-h-screen relative">
         <div
           className={`${styles.hamburgerMenu} flex md:hidden`}
           onClick={menuToggle}
@@ -53,7 +53,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
           <div className={`${styles.barBottom} barBottom`}></div>
         </div>
         <div className="col-span-12 lg:col-span-9 lg:col-start-4">
-          <main className="flex justify-center">{children}</main>
+          <main className="flex w-full justify-center">{children}</main>
         </div>
       </div>
     </div>

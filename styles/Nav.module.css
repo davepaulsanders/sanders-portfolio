@@ -3,6 +3,7 @@
     position: fixed;
     height: 100%;
     transition: right 0.3s ease-in-out;
+    z-index: 100;
    }
 
 .underline {
