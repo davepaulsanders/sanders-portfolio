@@ -49,9 +49,10 @@ const Contact = () => {
 
   }
   return (
-    <div className="mt-28 flex mr-0 lg:mr-40 2xl:mr-60 w-11/12 lg:w-5/12">
+    <div className="mt-28 flex flex-col mr-0 lg:mr-40 2xl:mr-60 w-11/12 lg:w-5/12">
+      <h1 className="text-4xl font-bold mb-8">Send me a message!</h1>
      <form
-        className="flex flex-col w-full"
+        className="flex flex-col w-full font-extralight"
         id="contact-form"
         name="contact-form"
         onSubmit={handleFormSubmit}
