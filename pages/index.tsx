@@ -13,7 +13,7 @@ export default function Home() {
       <img className={`${styles.headshot} m-3 w-[300px]`} src="headshot.jpeg" alt="Dave Sanders" />
       <div className="m-3">
         <h1 className="text-5xl md:text-6xl text-center md:text-left font-bold mb-3">Welcome!</h1>
-        <p className="text-lg md:text-xl text-center md:text-left font-extralight" >I&apos;m Dave Sanders, a <span className={styles.span}>web developer</span> and <span className={styles.span}>musician</span> based out of Washington D.C.  Thanks for visiting!  </p>
+        <p className="text-lg md:text-xl w-full 2xl:w-8/12 text-center md:text-left font-extralight" >I&apos;m Dave Sanders, a <span className={styles.span}>web developer</span> and <span className={styles.span}>musician</span> based out of Washington D.C.  Thanks for visiting!  </p>
       </div>
     </div>
     </>
