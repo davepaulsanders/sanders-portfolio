@@ -14,7 +14,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
     // closing and opening menu for resize if window is less than 1000px
     router.events.on('routeChangeStart', function (){
         if (window.innerWidth < 1000) {
-          closeMenuAnimation
+          closeMenuAnimation()
         }
     } )
       // toggling menu for resize events
