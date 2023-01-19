@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Project from "../components/Project"
+import Project from "../components/Project.js"
 
 const projectsArr = [
   {img: "gigSocial.png", title: "gigSocial", description: "gigSocial is an app designed to help musicians manage live performances.  It includes a flashing metronome, song lyrics, and community feedback on your setlist choices.", technologies: ["React", "Express", "Node", "GraphQL", "MongoDB", "Mongoose", "Bootstrap", "OAuth 2.0", "JSON Web Tokens"], github: "https://github.com/davepaulsanders/gigSocial", liveSite: "https://gigsocial.netlify.app/"},
