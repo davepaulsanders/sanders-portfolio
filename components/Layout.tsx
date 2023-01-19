@@ -65,7 +65,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
       barMiddle.style.opacity = "";
       barBottom.style.transform = "";
 
-      nav.classList.add("open");
+      nav.classList.remove("open");
   };
 
   // toggle nav menu in mobile

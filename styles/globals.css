@@ -11,3 +11,19 @@ html {
 
 }
 
+button:hover {
+    background-color: #28293D!important;
+    
+}
+
+input[type="text"], input[type="email"], textarea {
+    border-radius: 0;
+    border-bottom: 2px solid!important;
+    background: none!important;
+    background-color: #28293D!important;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    outline-color: var(--highlight)!important;
+    outline-width: 1px!important;
+}
