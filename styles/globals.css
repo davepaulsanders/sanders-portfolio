@@ -2,28 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
-    background-color: #1B1B27;
-    color: #E8EAED;
-    --highlight: #38BDF8;
-    letter-spacing: 1px;
-
+  background-color: #1b1b27;
+  color: #e8eaed;
+  --highlight: #38bdf8;
+  letter-spacing: 1px;
 }
 
 button:hover {
-    background-color: #28293D!important;
-    
+  background-color: #28293d !important;
 }
 
-input[type="text"], input[type="email"], textarea {
-    border-radius: 0;
-    border-bottom: 2px solid!important;
-    background: none!important;
-    background-color: #28293D!important;
+input[type="text"],
+input[type="email"],
+textarea {
+  border-radius: 0;
+  border-bottom: 2px solid !important;
+  background: none !important;
+  background-color: #28293d !important;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-    outline-color: var(--highlight)!important;
-    outline-width: 1px!important;
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline-color: var(--highlight) !important;
+  outline-width: 1px !important;
 }

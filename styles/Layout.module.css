@@ -1,26 +1,26 @@
-  .barTop,
-  .barMiddle,
-  .barBottom {
-    height: 2px;
-    background: white;
-    border-radius: 5px;
-    margin: 3px 0;
-    transform-origin: left;
-    transition: all 0.5s;
-  }
+.barTop,
+.barMiddle,
+.barBottom {
+  height: 2px;
+  background: white;
+  border-radius: 5px;
+  margin: 3px 0;
+  transform-origin: left;
+  transition: all 0.5s;
+}
 
-  .hamburgerMenu {
-    position: absolute;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    height: 1.5rem;
-    width: 1.5rem;
-    cursor: pointer;
-    z-index: 100;
-    right: 0;
-    margin: 2rem;
-  }
+.hamburgerMenu {
+  position: absolute;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+  right: 0;
+  margin: 2rem;
+}
 
-  .nav-transition {
-    transition: left 0.5s ease-in-out;
-  }
+.nav-transition {
+  transition: left 0.5s ease-in-out;
+}

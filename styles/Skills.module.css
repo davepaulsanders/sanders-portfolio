@@ -1,0 +1,17 @@
+.background {
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-left: 6rem;
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 1000px) {
+  .listItem {
+    margin-left: 0;
+  }
+}

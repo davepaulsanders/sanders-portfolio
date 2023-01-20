@@ -1,8 +1,8 @@
 .headshot {
-    border-radius: 57% 43% 40% 60% / 71% 48% 52% 29%;
+  border-radius: 57% 43% 40% 60% / 71% 48% 52% 29%;
 }
 
 .span {
-    color: var(--highlight);
-    font-weight: 500;
+  color: var(--highlight);
+  font-weight: 500;
 }

@@ -1,40 +1,39 @@
 .background {
-    background-color: #28293D;
-    position: fixed;
-    height: 100%;
-    transition: right 0.3s ease-in-out;
-    z-index: 100;
-   }
+  background-color: #28293d;
+  position: fixed;
+  height: 100%;
+  transition: right 0.3s ease-in-out;
+  z-index: 100;
+}
 
 .underline {
-    position: relative;
+  position: relative;
 }
 .underline:hover {
-    color: var(--highlight);
+  color: var(--highlight);
 }
-.underline::after{
-    display: block;
-    content: '';
-    width: 130%;
-    height: 2px;
-    background: #E8EAED;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transition: transform 0.2s;
-    transform: translate(-50%) scaleX(0);
-    transform-origin: center;
+.underline::after {
+  display: block;
+  content: "";
+  width: 130%;
+  height: 2px;
+  background: #e8eaed;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transition: transform 0.2s;
+  transform: translate(-50%) scaleX(0);
+  transform-origin: center;
 }
 
 .underline:hover::after {
-    left: 50%;
-    transform: translate(-50%) scaleX(1);
-    background: var(--highlight);
+  left: 50%;
+  transform: translate(-50%) scaleX(1);
+  background: var(--highlight);
 }
 
 @media only screen and (max-width: 1000px) {
-    .background {
-        right: -100%;
-        
-    }
+  .background {
+    right: -100%;
+  }
 }

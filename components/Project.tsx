@@ -1,20 +1,19 @@
-import React from "react";
-import styles from "../styles/Project.module.css";
+import React from "react"
+import styles from "../styles/Project.module.css"
 import Image from "next/image"
 
 type ProjectObj = {
   project: {
-    img: string;
-    title: string;
-    description: string;
-    technologies: string[];
-    github: string;
-    liveSite: string;
+    img: string
+    title: string
+    description: string
+    technologies: string[]
+    github: string
+    liveSite: string
   }
-  
 }
 
-const Project = ({project}: ProjectObj) => {
+const Project = ({ project }: ProjectObj) => {
   const colorChoice = (i: number) => {
     const colors = [
       "text-blue-500",
@@ -24,23 +23,23 @@ const Project = ({project}: ProjectObj) => {
       "text-yellow-500",
       "text-orange-500",
       "text-pink-500",
-    ];
+    ]
     if (colors.indexOf(`${i}`) === -1) {
-      return colors[i % colors.length];
+      return colors[i % colors.length]
     } else {
-      return colors[i];
+      return colors[i]
     }
-  };
+  }
   return (
     <div
       className={`${styles.cardBackground} flex flex-col md:flex-row p-4 rounded-md max-w-[1000px] mb-6`}
     >
       <div className="w-full md:w-8/12 h-[200px] relative">
-      <Image
-        src={project.img}
-        alt={project.title}
-        fill
-        className="object-cover"
+        <Image
+          src={project.img}
+          alt={project.title}
+          fill
+          className="object-cover"
         />
       </div>
       <div className="ml-0 md:ml-6 w-full">
@@ -76,12 +75,12 @@ const Project = ({project}: ProjectObj) => {
                   ? tech
                   : `${tech} • `}
               </span>
-            );
+            )
           })}
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project
