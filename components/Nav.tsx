@@ -1,6 +1,6 @@
-import Link from "next/link"
-import Footer from "./Footer"
-import styles from "../styles/Nav.module.css"
+import Link from "next/link";
+import Footer from "./Footer";
+import styles from "../styles/Nav.module.css";
 const Nav = () => {
   return (
     <div
@@ -35,7 +35,7 @@ const Nav = () => {
       </ul>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
