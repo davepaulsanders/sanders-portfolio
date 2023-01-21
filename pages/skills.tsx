@@ -96,13 +96,10 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="w-full mt-20 md:mt-14">
+    <section className="w-full mt-6 md:mt-28">
       <ul
-        className={`grid grid-rows-2 gap-x-3 grid-cols-2 md:grid-cols-3 md:w-9/12 ${styles.background}`}
+        className={`grid gap-x-8 grid-cols-2 md:grid-cols-3 md:w-9/12 ${styles.background}`}
       >
-        <div className="text-center row-start-1 col-span-2 md:col-span-3 mb-14 md:mb-10">
-          <h2 className="text-4xl font-bold text-center">Skills</h2>
-        </div>
         {skills.map((skill: SkillsObj) => (
           <div key={skill.skill} className={styles.listItem}>
             <Image
@@ -116,7 +113,7 @@ const Skills = () => {
           </div>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

@@ -32,7 +32,7 @@ const Project = ({ project }: ProjectObj) => {
   }
   return (
     <div
-      className={`${styles.cardBackground} flex flex-col md:flex-row p-4 rounded-md max-w-[1000px] mb-6`}
+      className={`${styles.cardBackground} flex flex-col md:flex-row p-4 rounded-md max-w-[900px] mb-6`}
     >
       <div className="w-full md:w-8/12 h-[200px] relative">
         <Image

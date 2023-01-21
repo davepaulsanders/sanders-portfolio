@@ -1,8 +1,9 @@
 import styles from "../styles/Music.module.css";
-import Image from "next/image"
+import Image from "next/image";
+
 const Music = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row mt-40 md:mt-24 items-center">
+    <section className="w-full flex flex-col md:flex-row mt-10 md:mt-24 items-center">
       <div className="flex flex-col w-full md:w-1/2 px-8">
         <p className="font-extralight mb-10 leading-8">
           In my other career as a{" "}
@@ -41,7 +42,7 @@ const Music = () => {
         width={400}
         height={600}
       />
-    </div>
+    </section>
   );
 };
 

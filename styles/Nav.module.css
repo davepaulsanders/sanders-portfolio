@@ -12,6 +12,7 @@
 .underline:hover {
   color: var(--highlight);
 }
+
 .underline::after {
   display: block;
   content: "";
@@ -19,13 +20,14 @@
   height: 2px;
   background: #e8eaed;
   position: absolute;
-  bottom: -10px;
+  bottom: -8px;
   left: 50%;
   transition: transform 0.2s;
   transform: translate(-50%) scaleX(0);
   transform-origin: center;
 }
 
+.active::after,
 .underline:hover::after {
   left: 50%;
   transform: translate(-50%) scaleX(1);

@@ -1,58 +1,57 @@
-import React, { useRef } from "react"
-import emailjs from "@emailjs/browser"
-import { serviceKey, publicKey } from "../keys"
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { serviceKey, publicKey } from "../keys";
 
 const Contact = () => {
-  const form = useRef()
-  const name = useRef()
-  const email = useRef()
-  const message = useRef()
+  const form = useRef();
+  const name = useRef();
+  const email = useRef();
+  const message = useRef();
 
   const clearError = (e: React.FocusEvent) => {
-    const closestError = e.target.nextSibling
-    const formButton = document.querySelector(".form-submit") as HTMLElement
-    closestError.textContent = ""
-    formButton.textContent = "Submit"
-  }
+    const closestError = e.target.nextSibling;
+    const formButton = document.querySelector(".form-submit") as HTMLElement;
+    closestError.textContent = "";
+    formButton.textContent = "Submit";
+  };
 
   const handleFormSubmit = async (e: React.FocusEvent) => {
-    e.preventDefault()
-    const nameError = document.querySelector("#nameHelp") as HTMLElement
-    const emailError = document.querySelector("#emailHelp") as HTMLElement
-    const messageError = document.querySelector("#messageHelp") as HTMLElement
-    const formButton = document.querySelector(".form-submit") as HTMLElement
+    e.preventDefault();
+    const nameError = document.querySelector("#nameHelp") as HTMLElement;
+    const emailError = document.querySelector("#emailHelp") as HTMLElement;
+    const messageError = document.querySelector("#messageHelp") as HTMLElement;
+    const formButton = document.querySelector(".form-submit") as HTMLElement;
 
     if (name.current.value === "") {
-      nameError.textContent = "Please fill out a name!"
-      return
+      nameError.textContent = "Please fill out a name!";
+      return;
     }
     if (email.current.value === "") {
-      emailError.textContent = "Please fill out an email!"
-      return
+      emailError.textContent = "Please fill out an email!";
+      return;
     }
     if (message.current.value === "") {
-      messageError.textContent = "Please fill out a message!"
-      return
+      messageError.textContent = "Please fill out a message!";
+      return;
     }
 
     const emailSent = await emailjs.sendForm(
       serviceKey,
       "template_upsya8q",
       form.current,
-      publicKey,
-    )
+      publicKey
+    );
 
     if (emailSent.status === 200) {
-      formButton.textContent = "Sent!"
-      form.current.reset()
+      formButton.textContent = "Sent!";
+      form.current.reset();
     } else {
-      formButton.textContent = "Something went wrong!"
-      form.current.reset()
+      formButton.textContent = "Something went wrong!";
+      form.current.reset();
     }
-  }
+  };
   return (
-    <div className="mt-28 flex flex-col mr-0 lg:mr-40 2xl:mr-60 w-11/12 lg:w-5/12">
-      <h1 className="text-4xl font-bold mb-8">Send me a message!</h1>
+    <div className="mt-10 flex flex-col mr-0 lg:mr-40 2xl:mr-60 w-11/12 lg:w-5/12">
       <form
         className="flex flex-col w-full font-extralight"
         id="contact-form"
@@ -112,7 +111,7 @@ const Contact = () => {
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

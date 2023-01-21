@@ -1,5 +1,5 @@
-import Head from "next/head"
-import Project from "../components/Project"
+import Head from "next/head";
+import Project from "../components/Project";
 
 const projectsArr = [
   {
@@ -47,21 +47,21 @@ const projectsArr = [
     github: "https://github.com/davepaulsanders/Tech-nically",
     liveSite: "https://technically.onrender.com/",
   },
-]
+];
 
 const Projects = () => {
   return (
-    <div className="w-full mt-24 ml-4 mr-4 lg:ml-0 lg:mr-10">
+    <div className="w-full mt-10 md:mt-20">
       <Head>
         <title>Dave Sanders Projects</title>
       </Head>
       <section>
         {projectsArr.map((project) => {
-          return <Project project={project} key={project.title} />
+          return <Project project={project} key={project.title} />;
         })}
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

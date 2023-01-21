@@ -1,18 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Nav from "./Nav";
 import styles from "../styles/Layout.module.css";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 
+const links = ["Home", "Applications", "Skills", "Music", "Contact"];
+
 const Layout = ({ children }: React.PropsWithChildren) => {
   const router = useRouter();
+  const [activeLink, setActiveLink] = useState(links[0]);
 
   useEffect(() => {
     const nav = document.querySelector(".nav") as HTMLElement;
 
     // closing and opening menu for resize if window is less than 1000px
-    router.events.on("routeChangeStart", function () {
+    router.events.on("routeChangeStart", function (e) {
       if (window.innerWidth < 1000) {
         closeMenuAnimation();
       }
@@ -63,7 +66,9 @@ const Layout = ({ children }: React.PropsWithChildren) => {
 
     nav.classList.remove("open");
   };
-
+  const handleClick = (e: Event) => {
+    setActiveLink(links[0]);
+  };
   // toggle nav menu in mobile
   const menuToggle = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -80,16 +85,20 @@ const Layout = ({ children }: React.PropsWithChildren) => {
   };
   return (
     <div className="flex">
-      <Link href={"/"}>
+      <Link href="/" onClick={() => setActiveLink("Home")}>
         <Image
-          className="absolute md:fixed top-5 left-5 z-[100]"
+          className="absolute md:fixed top-6 left-6 z-[100]"
           src="/d-key.png"
           alt="d-key"
           width={40}
           height={40}
         />
       </Link>
-      <Nav />
+      <Nav
+        links={links}
+        activeLink={activeLink}
+        setActiveLink={setActiveLink}
+      />
       <div className="main grid grid-cols-12 w-full min-h-screen max-h-screen relative">
         <div
           className={`${styles.hamburgerMenu} flex lg:hidden`}
@@ -100,6 +109,17 @@ const Layout = ({ children }: React.PropsWithChildren) => {
           <div className={`${styles.barBottom} barBottom`}></div>
         </div>
         <div className="col-span-12 lg:col-span-9 lg:col-start-4">
+          <div
+            className={
+              activeLink === "Home"
+                ? "md:hidden text-center"
+                : "md:hidden text-center mt-24"
+            }
+          >
+            <h2 className="text-4xl font-bold text-center">
+              {activeLink === "Home" ? "" : activeLink}
+            </h2>
+          </div>
           <main className="flex w-full justify-center">{children}</main>
         </div>
       </div>
