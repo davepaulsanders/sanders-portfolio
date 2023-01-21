@@ -1,6 +1,99 @@
 import Image from "next/image";
 import styles from "../styles/Skills.module.css";
 
+type SkillsObj = {
+  skill: string;
+  icon: string;
+  width: number;
+  height: number;
+};
+const skills = [
+  {
+    skill: "Javascript",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "Typescript",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "React",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "NextJS",
+    icon: "/nextjs.png",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "Node",
+    icon: "/node.png",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "Express",
+    icon: "/express.png",
+    width: 35,
+    height: 35,
+  },
+  {
+    skill: "MySQL",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "MongoDB",
+    icon: "/mongo.png",
+    width: 35,
+    height: 35,
+  },
+  {
+    skill: "Docker",
+    icon: "/docker.png",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "AWS",
+    icon: "/amazon.png",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "GraphQL",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "Tailwind",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "Bootstrap",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill: "Git",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
+    width: 40,
+    height: 40,
+  },
+];
+
 const Skills = () => {
   return (
     <div className="w-full mt-20 md:mt-14">
@@ -10,156 +103,18 @@ const Skills = () => {
         <div className="text-center row-start-1 col-span-2 md:col-span-3 mb-14 md:mb-10">
           <h2 className="text-4xl font-bold text-center">Skills</h2>
         </div>
-
-        {/* COLUMN 1 -------------------------------------------------------------------------*/}
-
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">Javascript</li>
-        </div>
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">Typescript</li>
-        </div>
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">React</li>
-        </div>
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="/nextjs.png"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">NextJS</li>
-        </div>
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="/node.png"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">Node</li>
-        </div>
-
-        {/* COLUMN 2 -------------------------------------------------------------------------*/}
-
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={35}
-            height={35}
-            src="/express.png"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">Express</li>
-        </div>
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">MySQL</li>
-        </div>
-
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={35}
-            height={35}
-            src="/mongo.png"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">MongoDB</li>
-        </div>
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="/docker.png"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">Docker</li>
-        </div>
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="/amazon.png"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">AWS</li>
-        </div>
-
-        {/* COLUMN 3 -------------------------------------------------------------------------*/}
-
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">GraphQL</li>
-        </div>
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">Tailwind</li>
-        </div>
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">Bootstrap</li>
-        </div>
-        <div className={styles.listItem}>
-          <Image
-            className="mr-2"
-            width={40}
-            height={40}
-            src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg"
-            alt="react"
-          ></Image>
-          <li className="m-1 w-[75px]">Git</li>
-        </div>
+        {skills.map((skill: SkillsObj) => (
+          <div key={skill.skill} className={styles.listItem}>
+            <Image
+              className="mr-2"
+              width={skill.width}
+              height={skill.height}
+              src={skill.icon}
+              alt={skill.skill}
+            ></Image>
+            <li className="m-1 w-[75px]">{skill.skill}</li>
+          </div>
+        ))}
       </ul>
     </div>
   );
