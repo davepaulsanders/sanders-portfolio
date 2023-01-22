@@ -1,6 +1,6 @@
-import Head from "next/head"
-import styles from "../styles/Index.module.css"
-import Image from "next/image"
+import Head from "next/head";
+import styles from "../styles/Index.module.css";
+import Image from "next/image";
 export default function Home() {
   return (
     <>
@@ -11,15 +11,19 @@ export default function Home() {
         <Image
           width={300}
           height={300}
-          className={`${styles.headshot} m-3`}
+          className={`${styles.headshot} m-3 animateAlone`}
           src="/headshot.jpeg"
           alt="Dave Sanders"
         />
         <div className="m-3">
-          <h1 className="text-5xl md:text-6xl text-center md:text-left font-bold mb-3">
+          <h1
+            className={`${styles.welcome} text-5xl md:text-6xl text-center md:text-left font-bold mb-3 animateAlone`}
+          >
             Welcome!
           </h1>
-          <p className="text-lg md:text-xl w-full 2xl:w-8/12 text-center md:text-left font-extralight">
+          <p
+            className={`${styles.para} text-lg md:text-xl w-full 2xl:w-8/12 text-center md:text-left font-extralight animateAlone`}
+          >
             I&apos;m Dave Sanders, a{" "}
             <span className={styles.span}>web developer</span> and{" "}
             <span className={styles.span}>musician</span> based out of
@@ -28,5 +32,5 @@ export default function Home() {
         </div>
       </div>
     </>
-  )
+  );
 }

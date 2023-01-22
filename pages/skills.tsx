@@ -100,8 +100,8 @@ const Skills = () => {
       <ul
         className={`grid gap-x-8 grid-cols-2 md:grid-cols-3 md:w-9/12 ${styles.background}`}
       >
-        {skills.map((skill: SkillsObj) => (
-          <div key={skill.skill} className={styles.listItem}>
+        {skills.map((skill: SkillsObj, i) => (
+          <div key={skill.skill} className={`${styles.listItem} animateMap`}>
             <Image
               className="mr-2"
               width={skill.width}

@@ -1,9 +1,0 @@
-.span {
-  color: var(--highlight);
-  font-weight: 700;
-  font-size: large;
-}
-
-.img {
-    filter: grayscale(10%)
-}

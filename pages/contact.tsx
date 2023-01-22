@@ -51,7 +51,7 @@ const Contact = () => {
     }
   };
   return (
-    <div className="mt-10 flex flex-col mr-0 lg:mr-40 2xl:mr-60 w-11/12 lg:w-5/12">
+    <div className="mt-10 md:mt-28 flex flex-col mr-0 lg:mr-40 2xl:mr-60 w-11/12 lg:w-5/12 animateMap">
       <form
         className="flex flex-col w-full font-extralight"
         id="contact-form"

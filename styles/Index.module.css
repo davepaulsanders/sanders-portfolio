@@ -1,7 +1,13 @@
 .headshot {
   border-radius: 57% 43% 40% 60% / 71% 48% 52% 29%;
+  animation-delay: 0.3s;
 }
-
+.welcome {
+  animation-delay: 0.5s;
+}
+.para {
+  animation-delay: 0.7s;
+}
 .span {
   color: var(--highlight);
   font-weight: 500;

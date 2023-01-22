@@ -28,3 +28,30 @@ textarea:focus {
   outline-color: var(--highlight) !important;
   outline-width: 1px !important;
 }
+
+/* ANIMATION -------------------------------------------------------------------------------- */
+
+.animateMap {
+  animation: materialize 0.3s ease-in backwards;
+  @for $i from 1 through 50 {
+    &:nth-child(#{$i}) {
+      animation-delay: 150ms * $i;
+    }
+  }
+}
+
+.animateAlone {
+  animation: materialize 0.3s ease-in backwards;
+}
+
+@keyframes materialize {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
