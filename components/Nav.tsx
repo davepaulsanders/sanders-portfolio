@@ -22,16 +22,6 @@ const Nav = ({ links, activeLink, setActiveLink }) => {
             </Link>
           </li>
         ))}
-        {/* {links.forEach((link) => (
-          <li className="m-10 relative" key={link}>
-            <Link
-              className={styles.underline}
-              href={link === "Home" ? "/" : `/${links}`}
-            >
-              {link}
-            </Link>
-          </li>
-        ))} */}
       </ul>
       <Footer />
     </div>

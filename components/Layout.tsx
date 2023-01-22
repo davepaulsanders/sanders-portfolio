@@ -9,9 +9,17 @@ const links = ["Home", "Applications", "Skills", "Music", "Contact"];
 
 const Layout = ({ children }: React.PropsWithChildren) => {
   const router = useRouter();
-  const [activeLink, setActiveLink] = useState(links[0]);
+  const [activeLink, setActiveLink] = useState();
 
   useEffect(() => {
+    let route = router.pathname;
+    route = route.charAt(1).toUpperCase() + route.slice(2);
+    if (route === "") {
+      setActiveLink("Home");
+    } else {
+      setActiveLink(route);
+    }
+
     const nav = document.querySelector(".nav") as HTMLElement;
 
     // closing and opening menu for resize if window is less than 1000px
@@ -66,9 +74,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
 
     nav.classList.remove("open");
   };
-  const handleClick = (e: Event) => {
-    setActiveLink(links[0]);
-  };
+
   // toggle nav menu in mobile
   const menuToggle = (e: React.MouseEvent) => {
     e.preventDefault();
