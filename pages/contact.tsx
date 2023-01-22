@@ -1,15 +1,15 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { serviceKey, publicKey } from "../keys";
 
 const Contact = () => {
-  const form = useRef();
-  const name = useRef();
-  const email = useRef();
-  const message = useRef();
+  const form = useRef<HTMLFormElement>(null);
+  const name = useRef<HTMLInputElement>(null);
+  const email = useRef<HTMLInputElement>(null);
+  const message = useRef<HTMLTextAreaElement>(null);
 
   const clearError = (e: React.FocusEvent) => {
-    const closestError = e.target.nextSibling;
+    const closestError = e.target.nextSibling as HTMLElement;
     const formButton = document.querySelector(".form-submit") as HTMLElement;
     closestError.textContent = "";
     formButton.textContent = "Submit";
@@ -22,15 +22,15 @@ const Contact = () => {
     const messageError = document.querySelector("#messageHelp") as HTMLElement;
     const formButton = document.querySelector(".form-submit") as HTMLElement;
 
-    if (name.current.value === "") {
+    if (name.current!.value === "") {
       nameError.textContent = "Please fill out a name!";
       return;
     }
-    if (email.current.value === "") {
+    if (email.current!.value === "") {
       emailError.textContent = "Please fill out an email!";
       return;
     }
-    if (message.current.value === "") {
+    if (message.current!.value === "") {
       messageError.textContent = "Please fill out a message!";
       return;
     }
@@ -38,16 +38,16 @@ const Contact = () => {
     const emailSent = await emailjs.sendForm(
       serviceKey,
       "template_upsya8q",
-      form.current,
+      form.current!,
       publicKey
     );
 
     if (emailSent.status === 200) {
       formButton.textContent = "Sent!";
-      form.current.reset();
+      form.current!.reset();
     } else {
       formButton.textContent = "Something went wrong!";
-      form.current.reset();
+      form.current!.reset();
     }
   };
   return (
@@ -56,7 +56,7 @@ const Contact = () => {
         className="flex flex-col w-full font-extralight"
         id="contact-form"
         name="contact-form"
-        onSubmit={handleFormSubmit}
+        onSubmit={(e) => handleFormSubmit}
         ref={form}
       >
         <div className="form-group flex flex-col mb-4">

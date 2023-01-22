@@ -5,18 +5,19 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 
-const links = ["Home", "Applications", "Skills", "Music", "Contact"];
+const links: string[] = ["Home", "Applications", "Skills", "Music", "Contact"];
 
 const Layout = ({ children }: React.PropsWithChildren) => {
   const router = useRouter();
-  const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState<string>("");
 
   useEffect(() => {
     let route = router.pathname;
-    route = route.charAt(1).toUpperCase() + route.slice(2);
-    if (route === "") {
+    console.log(route);
+    if (route === "/") {
       setActiveLink("Home");
     } else {
+      route = route.charAt(1).toUpperCase() + route.slice(2);
       setActiveLink(route);
     }
 
@@ -40,7 +41,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
     });
 
     return () => router.events.off("routeChangeStart", closeMenuAnimation);
-  }, [router.events]);
+  }, [router.events, setActiveLink]);
 
   const openMenuAnimation = () => {
     const nav = document.querySelector(".nav") as HTMLElement;
@@ -100,7 +101,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
     <div className="flex">
       <Link href="/" onClick={() => setActiveLink("Home")}>
         <Image
-          className="absolute md:fixed top-6 left-6 z-[100]"
+          className="absolute md:fixed top-6 left-6 z-[120]"
           src="/d-key.png"
           alt="d-key"
           width={40}

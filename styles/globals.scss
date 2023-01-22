@@ -35,7 +35,7 @@ textarea:focus {
   animation: materialize 0.3s ease-in backwards;
   @for $i from 1 through 50 {
     &:nth-child(#{$i}) {
-      animation-delay: 150ms * $i;
+      animation-delay: 50ms * $i;
     }
   }
 }

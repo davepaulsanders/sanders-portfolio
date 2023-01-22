@@ -1,8 +1,16 @@
 import Link from "next/link";
 import Footer from "./Footer";
 import styles from "../styles/Nav.module.css";
-import { David_Libre } from "@next/font/google";
-const Nav = ({ links, activeLink, setActiveLink }) => {
+
+const Nav = ({
+  links,
+  activeLink,
+  setActiveLink,
+}: {
+  links: string[];
+  activeLink: string;
+  setActiveLink: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   return (
     <>
       <div className={`${styles.blur} blur`}></div>
