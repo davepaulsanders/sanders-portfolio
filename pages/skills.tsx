@@ -96,7 +96,10 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="w-full mt-6 md:mt-28">
+    <section className="w-full mt-12 md:mt-28">
+       <h2 className="md:hidden text-4xl font-bold text-center mt-12 mb-12 h-[16px] animateTitle">
+            Skills
+          </h2>
       <ul
         className={`grid gap-x-8 grid-cols-2 md:grid-cols-3 md:w-9/12 ${styles.background}`}
       >

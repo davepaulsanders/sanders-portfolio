@@ -51,7 +51,10 @@ const Contact = () => {
     }
   };
   return (
-    <div className="mt-10 md:mt-28 flex flex-col mr-0 lg:mr-40 2xl:mr-60 w-11/12 lg:w-5/12 animateMap">
+    <div className="mt-14 md:mt-28 flex flex-col mr-0 lg:mr-40 2xl:mr-60 w-11/12 lg:w-5/12 animateMap">
+       <h2 className="md:hidden text-4xl font-bold text-center mt-10 mb-16 h-[16px] animateTitle">
+          Contact
+        </h2>
       <form
         className="flex flex-col w-full font-extralight"
         id="contact-form"

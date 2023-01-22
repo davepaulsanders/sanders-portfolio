@@ -4,10 +4,10 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <Head>
+      <Head>z
         <title>Dave Sanders Portfolio</title>
       </Head>
-      <div className="flex flex-col md:flex-row h-screen items-center w-10/12 md:w-3/4 pt-20 md:pt-0 pb-20">
+      <div className="flex flex-col md:flex-row h-screen items-center w-10/12 md:w-3/4 mt-24 pt-0 pb-20">
         <Image
           width={300}
           height={300}

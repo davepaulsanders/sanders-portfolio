@@ -123,17 +123,6 @@ const Layout = ({ children }: React.PropsWithChildren) => {
           <div className={`${styles.barBottom} barBottom`}></div>
         </div>
         <div className="col-span-12 lg:col-span-9 lg:col-start-4">
-          <div
-            className={
-              activeLink === "Home"
-                ? "md:hidden text-center"
-                : "md:hidden text-center mt-24"
-            }
-          >
-            <h2 className="text-4xl font-bold text-center">
-              {activeLink === "Home" ? "" : activeLink}
-            </h2>
-          </div>
           <main className="flex w-full justify-center">{children}</main>
         </div>
       </div>

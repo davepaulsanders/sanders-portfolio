@@ -44,6 +44,10 @@ textarea:focus {
   animation: materialize 0.3s ease-in backwards;
 }
 
+.animateTitle {
+  animation: materialize 0.3s ease-in-out backwards;
+}
+
 @keyframes materialize {
   from {
     opacity: 0;

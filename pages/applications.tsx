@@ -51,11 +51,14 @@ const projectsArr = [
 
 const Projects = () => {
   return (
-    <div className="w-full mt-10 md:mt-20">
+    <div className="w-full mt-14 md:mt-20">
       <Head>
         <title>Dave Sanders Projects</title>
       </Head>
       <section>
+        <h2 className="md:hidden text-4xl font-bold text-center mt-10 mb-16 h-[16px] animateTitle">
+          Applications
+        </h2>
         {projectsArr.map((project) => {
           return <Project project={project} key={project.title} />;
         })}
