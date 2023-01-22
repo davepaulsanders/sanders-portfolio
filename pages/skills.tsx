@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../styles/Skills.module.css";
+import Head from "next/head";
 
 type SkillsObj = {
   skill: string;
@@ -7,6 +8,7 @@ type SkillsObj = {
   width: number;
   height: number;
 };
+
 const skills = [
   {
     skill: "Javascript",
@@ -97,9 +99,12 @@ const skills = [
 const Skills = () => {
   return (
     <section className="w-full mt-12 md:mt-28">
-       <h2 className="md:hidden text-4xl font-bold text-center mt-12 mb-12 h-[16px] animateTitle">
-            Skills
-          </h2>
+      <Head>
+        <title>Dave Sanders Portfolio | Skills</title>
+      </Head>
+      <h2 className="md:hidden text-4xl font-bold text-center mt-12 mb-12 h-[16px] animateTitle">
+        Skills
+      </h2>
       <ul
         className={`grid gap-x-8 grid-cols-2 md:grid-cols-3 md:w-9/12 ${styles.background}`}
       >

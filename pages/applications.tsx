@@ -53,7 +53,7 @@ const Projects = () => {
   return (
     <div className="w-full mt-14 md:mt-20">
       <Head>
-        <title>Dave Sanders Projects</title>
+        <title>Dave Sanders Portfolio | Applications</title>
       </Head>
       <section>
         <h2 className="md:hidden text-4xl font-bold text-center mt-10 mb-16 h-[16px] animateTitle">

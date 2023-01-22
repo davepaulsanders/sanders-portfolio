@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <Head>z
+      <Head>
         <title>Dave Sanders Portfolio</title>
       </Head>
       <div className="flex flex-col md:flex-row h-screen items-center w-10/12 md:w-3/4 mt-24 pt-0 pb-20">

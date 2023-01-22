@@ -1,9 +1,13 @@
 import styles from "../styles/Music.module.scss";
 import Image from "next/image";
+import Head from "next/head";
 
 const Music = () => {
   return (
     <section className="w-full flex flex-col md:flex-row mt-12 md:mt-24 items-center">
+      <Head>
+        <title>Dave Sanders Portfolio | Music</title>
+      </Head>
       <h2 className="md:hidden text-4xl font-bold text-center mt-12 mb-14 h-[16px] animateTitle">
         Music
       </h2>
