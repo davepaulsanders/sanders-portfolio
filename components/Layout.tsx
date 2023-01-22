@@ -9,7 +9,7 @@ const links = ["Home", "Applications", "Skills", "Music", "Contact"];
 
 const Layout = ({ children }: React.PropsWithChildren) => {
   const router = useRouter();
-  const [activeLink, setActiveLink] = useState();
+  const [activeLink, setActiveLink] = useState("");
 
   useEffect(() => {
     let route = router.pathname;
@@ -44,6 +44,8 @@ const Layout = ({ children }: React.PropsWithChildren) => {
 
   const openMenuAnimation = () => {
     const nav = document.querySelector(".nav") as HTMLElement;
+    const blur = document.querySelector(".blur") as HTMLElement;
+    const html = document.querySelector("html") as HTMLElement;
     const barTop = document.querySelector(".barTop") as HTMLElement;
     const barMiddle = document.querySelector(".barMiddle") as HTMLElement;
     const barBottom = document.querySelector(".barBottom") as HTMLElement;
@@ -53,6 +55,8 @@ const Layout = ({ children }: React.PropsWithChildren) => {
       nav.style.right = "";
     } else {
       nav.style.right = "0";
+      blur.style.opacity = "0.6";
+      html.style.overflow = "hidden";
     }
     barTop.style.transform = "rotate(45deg)";
     barMiddle.style.transform = "translateX(1rem)";
@@ -62,6 +66,8 @@ const Layout = ({ children }: React.PropsWithChildren) => {
 
   const closeMenuAnimation = () => {
     const nav = document.querySelector(".nav") as HTMLElement;
+    const blur = document.querySelector(".blur") as HTMLElement;
+    const html = document.querySelector("html") as HTMLElement;
     const barTop = document.querySelector(".barTop") as HTMLElement;
     const barMiddle = document.querySelector(".barMiddle") as HTMLElement;
     const barBottom = document.querySelector(".barBottom") as HTMLElement;
@@ -71,8 +77,9 @@ const Layout = ({ children }: React.PropsWithChildren) => {
     barMiddle.style.transform = "";
     barMiddle.style.opacity = "";
     barBottom.style.transform = "";
-
+    blur.style.opacity = "0";
     nav.classList.remove("open");
+    html.style.overflow = "scroll";
   };
 
   // toggle nav menu in mobile
