@@ -12,19 +12,19 @@ type SkillsObj = {
 const skills = [
   {
     skill: "Javascript",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    icon: "/js.png",
     width: 40,
     height: 40,
   },
   {
     skill: "Typescript",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
+    icon: "ts.svg",
     width: 40,
     height: 40,
   },
   {
     skill: "React",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    icon: "/react.svg",
     width: 40,
     height: 40,
   },
@@ -48,7 +48,7 @@ const skills = [
   },
   {
     skill: "MySQL",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg",
+    icon: "/mysql.svg",
     width: 40,
     height: 40,
   },
@@ -72,25 +72,25 @@ const skills = [
   },
   {
     skill: "GraphQL",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
+    icon: "/graphql.svg",
     width: 40,
     height: 40,
   },
   {
     skill: "Tailwind",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+    icon: "/tailwind.svg",
     width: 40,
     height: 40,
   },
   {
     skill: "Bootstrap",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+    icon: "/bootstrap.svg",
     width: 40,
     height: 40,
   },
   {
     skill: "Git",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
+    icon: "/git.svg",
     width: 40,
     height: 40,
   },
