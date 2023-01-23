@@ -39,3 +39,4 @@ keys.js
 
 .prettierrc.js
 
+.env.local

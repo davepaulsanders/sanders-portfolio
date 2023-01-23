@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { serviceKey, publicKey } from "../keys";
 import Head from "next/head";
 
 const Contact = () => {
@@ -16,7 +15,7 @@ const Contact = () => {
     formButton.textContent = "Submit";
   };
 
-  const handleFormSubmit = async (e: React.FocusEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const nameError = document.querySelector("#nameHelp") as HTMLElement;
     const emailError = document.querySelector("#emailHelp") as HTMLElement;
@@ -35,12 +34,15 @@ const Contact = () => {
       messageError.textContent = "Please fill out a message!";
       return;
     }
-
+    console.log(
+      process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      process.env.NEXT_PUBLIC_SERVICE_KEY
+    );
     const emailSent = await emailjs.sendForm(
-      serviceKey,
+      process.env.NEXT_PUBLIC_SERVICE_KEY!,
       "template_upsya8q",
       form.current!,
-      publicKey
+      process.env.NEXT_PUBLIC_PUBLIC_KEY!
     );
 
     if (emailSent.status === 200) {
@@ -63,7 +65,7 @@ const Contact = () => {
         className="flex flex-col w-full font-extralight"
         id="contact-form"
         name="contact-form"
-        onSubmit={(e) => handleFormSubmit}
+        onSubmit={(e) => handleFormSubmit(e)}
         ref={form}
       >
         <div className="form-group flex flex-col mb-4">

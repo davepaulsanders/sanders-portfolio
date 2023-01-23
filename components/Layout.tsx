@@ -57,6 +57,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
     } else {
       nav.style.right = "0";
       blur.style.opacity = "0.6";
+      blur.style.zIndex = "2";
       html.style.overflow = "hidden";
     }
     barTop.style.transform = "rotate(45deg)";
@@ -79,6 +80,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
     barMiddle.style.opacity = "";
     barBottom.style.transform = "";
     blur.style.opacity = "0";
+    blur.style.zIndex = "0";
     nav.classList.remove("open");
     html.style.overflow = "scroll";
   };

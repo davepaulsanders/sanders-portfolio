@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: hanken;
+  src: url("../public/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
 html {
   background-color: #1b1b27;
   color: #e8eaed;
   --highlight: #38bdf8;
   letter-spacing: 1px;
+  font-family: hanken;
 }
 
 button:hover {

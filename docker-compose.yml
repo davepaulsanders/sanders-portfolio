@@ -1,0 +1,17 @@
+version: "1"
+
+services:
+  app:
+    image: davedev-dev
+    container_name: davedev-dev
+    build: .
+    volumes:
+      - ./pages:/pages
+      - ./components:/components
+      - ./public:/public
+      - ./styles:/styles
+      - ./node_modules:/node_modules
+    ports:
+      - 3000:3000
+volumes:
+  node_modules:

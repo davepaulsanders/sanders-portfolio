@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Dave Sanders Portfolio</title>
       </Head>
-      <div className="flex flex-col md:flex-row h-screen items-center w-10/12 md:w-3/4 mt-24 pt-0 pb-20">
+      <div className="flex flex-col md:flex-row h-screen items-center w-10/12 md:w-3/4 mt-24 md:mt-0 pt-0 pb-20">
         <Image
           width={300}
           height={300}
