@@ -4,6 +4,7 @@ import styles from "../styles/Layout.module.css";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 const links: string[] = ["Home", "Applications", "Skills", "Music", "Contact"];
 
@@ -100,6 +101,9 @@ const Layout = ({ children }: React.PropsWithChildren) => {
   };
   return (
     <div className="flex">
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
       <Link href="/" onClick={() => setActiveLink("Home")}>
         <Image
           className="absolute md:fixed top-6 left-6 z-[120]"
