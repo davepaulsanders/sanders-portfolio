@@ -55,15 +55,17 @@ const Project = ({ project }: ProjectObj) => {
                 height={50}
               />
             </a>
-            <a href={project.liveSite} target="_blank" rel="noreferrer">
-              <Image
-                className="z-10 hover:scale-125 hover:cursor-pointer mr-2 inline-block"
-                src={"/www.png"}
-                alt="live site"
-                height={35}
-                width={35}
-              />
-            </a>
+            {project.liveSite === "" ? null : (
+              <a href={project.liveSite} target="_blank" rel="noreferrer">
+                <Image
+                  className="z-10 hover:scale-125 hover:cursor-pointer mr-2 inline-block"
+                  src={"/www.png"}
+                  alt="live site"
+                  height={35}
+                  width={35}
+                />
+              </a>
+            )}
           </div>
         </div>
         <p className="text-sm font-extralight mb-4">{project.description}</p>

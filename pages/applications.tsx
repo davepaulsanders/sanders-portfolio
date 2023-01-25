@@ -45,7 +45,7 @@ const projectsArr = [
       "Render",
     ],
     github: "https://github.com/davepaulsanders/Tech-nically",
-    liveSite: "https://technically.onrender.com/",
+    liveSite: "",
   },
 ];
 

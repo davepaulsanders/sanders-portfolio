@@ -34,10 +34,7 @@ const Contact = () => {
       messageError.textContent = "Please fill out a message!";
       return;
     }
-    console.log(
-      process.env.NEXT_PUBLIC_PUBLIC_KEY,
-      process.env.NEXT_PUBLIC_SERVICE_KEY
-    );
+
     const emailSent = await emailjs.sendForm(
       process.env.NEXT_PUBLIC_SERVICE_KEY!,
       "template_upsya8q",

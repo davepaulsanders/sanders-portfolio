@@ -11,6 +11,10 @@ const nextConfig = {
       },
     ],
   },
+  env: {
+    NEXT_PUBLIC_SERVICE_KEY: process.env.NEXT_PUBLIC_SERVICE_KEY,
+    NEXT_PUBLIC_PUBLIC_KEY: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+  },
 };
 
 module.exports = nextConfig;

@@ -13,7 +13,6 @@ const Layout = ({ children }: React.PropsWithChildren) => {
 
   useEffect(() => {
     let route = router.pathname;
-    console.log(route);
     if (route === "/") {
       setActiveLink("Home");
     } else {

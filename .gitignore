@@ -40,3 +40,8 @@ keys.js
 .prettierrc.js
 
 .env.local
+.env
+
+Dockerfile
+
+docker-compose.yaml
