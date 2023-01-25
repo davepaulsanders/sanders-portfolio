@@ -102,8 +102,8 @@ const Layout = ({ children }: React.PropsWithChildren) => {
   return (
     <div className="flex">
       <Head>
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/letter.ico" />
+        <link rel="icon" type="image/x-icon" href="/letter.ico" />
       </Head>
       <Link href="/" onClick={() => setActiveLink("Home")}>
         <Image
