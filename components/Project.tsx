@@ -13,7 +13,7 @@ type ProjectObj = {
   };
 };
 
-const Project = ({ project }: ProjectObj) => {
+const Project: React.FC<ProjectObj> = ({ project }) => {
   const colorChoice = (i: number) => {
     const colors = [
       "text-blue-500",

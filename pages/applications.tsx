@@ -19,7 +19,7 @@ const projectsArr = [
       "JSON Web Tokens",
     ],
     github: "https://github.com/davepaulsanders/gigSocial",
-    liveSite: "https://gigsocial.netlify.app/",
+    liveSite: "https://gigsocial-production.up.railway.app",
   },
   {
     img: "/static/nba-scores.png",
