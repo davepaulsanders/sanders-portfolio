@@ -42,6 +42,4 @@ keys.js
 .env.local
 .env
 
-Dockerfile
-
 docker-compose.yaml
