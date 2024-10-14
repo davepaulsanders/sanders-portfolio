@@ -15,5 +15,5 @@ jobs:
           docker build -t davepsandy/portfolio:latest .
       - name: push image to docker hub
         run: |
-          echo ${{ secrets.DOCKER_HUB_TOKEN }} | docker login -u davepaulsanders --password-stdin
+          echo ${{ secrets.DOCKER_HUB_TOKEN }} | docker login -u davepaulsanders@gmail.com --password-stdin
           docker push davepsandy/portfolio:latest
