@@ -1,4 +1,5 @@
-FROM node:18-alpine AS base
+# syntax=docker/dockerfile:1
+FROM node:18 AS base
 
 FROM base AS deps
 
